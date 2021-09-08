@@ -20,6 +20,7 @@ read -p "Do you agree to use this tool in a legal way?(Y/n): " answer
 
 if [[ "$answer" == "y" ]]||[[ "$answer" == "Y" ]]; then
 	echo "Compiling...."
+	mkdir bin
 	echo "gcc src/icmp_flood.c -lpthread -o bin/icmp_flood"
 	gcc src/icmp_flood.c -lpthread -o bin/icmp_flood
 	echo "gcc src/tcp_ack_syn_flood.c -lpthread -o bin/tcp_psh_flood"
