@@ -27,8 +27,8 @@ don't permission. Be White Hat Hacker 😉️😀️.
 # Installation
 * Installing flood on any unix-like OS, note that this tool will not work on windows platform.
 ```
-git clone https://github.com/4anonz/flood.git
-cd flood
+git clone https://github.com/4anonz/Flood.git
+cd Flood
 chmod +x build.sh
 ./build.sh
 ./flood.py
@@ -136,6 +136,6 @@ It accepts only 2 arguments.
 # Author
 Anonymous Hacks(4anonz) - I am White Hat😎️.
 # Suggestions and Feedback
-Please [contact me](digitalguru64@gmail.com) if you have any feedback or suggestions or any bogus you
+Please digitalguru64@gmail.com if you have any feedback or suggestions or any bogus you
 want to report.
 Facebook [Anonymous Hacks](https://facebook.com/4anonz).
