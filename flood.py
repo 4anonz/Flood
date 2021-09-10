@@ -247,7 +247,7 @@ def parse_args():
                 try:
                     tmp = int(sys.argv[i+1])
                 except ValueError:
-                    print_msg()
+                    print_msg(sys.argv[i])
                 number_of_packets = str(sys.argv[i+1])
             elif sys.argv[i] == '-g' or sys.argv[i] == '--generate':
 
