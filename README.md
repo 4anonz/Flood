@@ -136,6 +136,7 @@ It accepts only 2 arguments.
 # Author
 Anonymous Hacks(4anonz) - I am White Hat😎️.
 # Suggestions and Feedback
-Please digitalguru64@gmail.com if you have any feedback or suggestions or any bogus you
+Please send me <a href="mailto:digitalguru64@gmail.com" target="_blank">email</a>
+Or [facebook](https://facebook.com/4anonz)  if you have any feedback or suggestions or any bogus you
 want to report.
 Facebook [Anonymous Hacks](https://facebook.com/4anonz).
