@@ -7,7 +7,7 @@ import sys, time
 from os import system, getenv
 
 # porgram version
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 # global variables
 attack = ''
@@ -30,6 +30,10 @@ cafe = "\033[1;33m"
 blu = "\033[1;34m"
 res = "\033[0;37;40m"
 
+QUOTS = [
+    "If i'd 8hrs to cut down a wood i will have spend the first 6hrs sharpening my axe.",
+    "Most prorgrammers do programming not "
+]
 # Simple interface
 def print_i():
     print(f"{red}██████╗██╗     ██████╗   ██████╗ ██████╗  ") 
@@ -247,7 +251,7 @@ def parse_args():
                 try:
                     tmp = int(sys.argv[i+1])
                 except ValueError:
-                    print_msg(sys.argv[i])
+                    print_msg()
                 number_of_packets = str(sys.argv[i+1])
             elif sys.argv[i] == '-g' or sys.argv[i] == '--generate':
 
